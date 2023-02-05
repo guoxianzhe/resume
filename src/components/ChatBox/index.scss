@@ -1,0 +1,83 @@
+.Chat-box {
+  overflow: hidden;
+  min-height: 65px;
+  display: flex;
+  &.left {
+  }
+
+  .avatar {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    left: 18px;
+    top: 25px;
+  }
+
+  .chat-box-lottie {
+    width: 500px;
+    height: 250px;
+    position: absolute;
+
+    svg {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      margin-left: 70px;
+      margin-top: 10px;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+  @keyframes hide-blink-caret {
+    100% {
+      border: none !important;
+    }
+  }
+  .text-container {
+    span {
+      overflow: hidden;
+      border-right: 0.15em solid transparent;
+      white-space: nowrap;
+      margin: 0;
+      margin-right: auto;
+      letter-spacing: 0.15em;
+      animation: typing 1.5s steps(30, end), blink-caret 0.5s step-end 3;
+    }
+    margin: 0 0 0 18px;
+    border-radius: 20px 20px 20px 0;
+    color: #666;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+    box-shadow: 5px 5px 15px 0 rgb(102 102 102 / 10%);
+    word-break: break-all;
+    word-wrap: break-word;
+    text-align: left;
+    position: relative;
+    display: flex;
+    font-size: 15px;
+    padding: 10px 15px;
+    line-height: 20px;
+    white-space: pre-wrap;
+    min-width: 9px;
+    min-height: 18px;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    @keyframes disappear {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        scale: (1.5);
+        display: none;
+        opacity: 0;
+      }
+      10%,
+      90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      20%,
+      80% {
+        transform: translate3d(+2px, 0, 0);
+      }
+      30%,
+      70% {
+        scale: (1);
+        transform: translate3d(-4px, 0, 0);
+      }
+      40%,
+      60% {
+        transform: translate3d(+4px, 0, 0);
+      }
+      50% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    }
+
+    .loading-lottie {
+      animation: disappear 3s 1 ease-in-out forwards;
+    }
+  }
+
+  .chat-container {
+    margin: 18px 0;
+
+    .Chat-box {
+      position: relative;
+      padding: 0px 18px 20px 58px;
+    }
+  }
+}

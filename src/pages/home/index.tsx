@@ -9,7 +9,7 @@ import { useInterval } from "../../utils/interval";
 function Home() {
   const [showLoading, setShowLoading] = useState<boolean>(true);
   const [currentChatBoxResumeList, setCurrentChatBoxResumeList] = useState<
-    string[]
+    { showAnimation: boolean; text: string; chatBoxLottieHideDelay: number }[]
   >([chatBoxResumeList[0]]);
   const [chatBoxIndex, setChatBoxIndex] = useState(1);
   const [isRunning, setIsRunning] = useState(true);
@@ -23,11 +23,15 @@ function Home() {
   const intervalDelay = () => {
     if (isFirstLoad) {
       return (
-        timerInstace.chatBoxLottieHideDelay + timerInstace.firstLoadingDelay
+        chatBoxResumeList[chatBoxIndex - 1].chatBoxLottieHideDelay +
+        timerInstace.firstLoadingDelay
       );
     }
     if (isRunning) {
-      return timerInstace.chatBoxLottieHideDelay;
+      return (
+        chatBoxResumeList[chatBoxIndex - 1].chatBoxLottieHideDelay +
+        timerInstace.typingDelay
+      );
     }
     return null;
   };
@@ -35,7 +39,7 @@ function Home() {
     currentChatBoxResumeList.push(chatBoxResumeList[chatBoxIndex]);
     setChatBoxIndex(chatBoxIndex + 1);
     setCurrentChatBoxResumeList(currentChatBoxResumeList);
-    if (chatBoxIndex >= chatBoxResumeList.length - 2) {
+    if (chatBoxIndex >= chatBoxResumeList.length - 1) {
       setIsRunning(false);
     }
   }, intervalDelay());
@@ -57,8 +61,8 @@ function Home() {
         </div>
       ) : (
         currentChatBoxResumeList.map((item) => (
-          <div className="chat-container" key={item}>
-            <ChatBox text={item} className="left" />
+          <div className="chat-container" key={item.text}>
+            <ChatBox itm={item} className="left" />
           </div>
         ))
       )}

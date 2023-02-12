@@ -9,7 +9,11 @@ import { useInterval } from "../../utils/interval";
 function Home() {
   const [showLoading, setShowLoading] = useState<boolean>(true);
   const [currentChatBoxResumeList, setCurrentChatBoxResumeList] = useState<
-    { showAnimation: boolean; text: string; chatBoxLottieHideDelay: number }[]
+    {
+      showAnimationWithCss: boolean;
+      text: string;
+      chatBoxLottieHideDelay: number;
+    }[]
   >([chatBoxResumeList[0]]);
   const [chatBoxIndex, setChatBoxIndex] = useState(1);
   const [isRunning, setIsRunning] = useState(true);
@@ -19,6 +23,18 @@ function Home() {
       setShowLoading(false);
       setIsFirstLoad(false);
     }, timerInstace.firstLoadingDelay);
+    const element = document.querySelector("#root");
+    const resizeObserver = new ResizeObserver((entries) => {
+      window.scrollTo(0, entries[0].target.clientHeight);
+    });
+    if (element instanceof HTMLElement) {
+      resizeObserver.observe(element);
+    }
+    return () => {
+      if (element instanceof HTMLElement) {
+        resizeObserver.unobserve(element);
+      }
+    };
   }, []);
   const intervalDelay = () => {
     if (isFirstLoad) {
@@ -30,6 +46,10 @@ function Home() {
     if (isRunning) {
       return (
         chatBoxResumeList[chatBoxIndex - 1].chatBoxLottieHideDelay +
+        (chatBoxResumeList[chatBoxIndex - 1].showAnimationWithCss
+          ? 0
+          : chatBoxResumeList[chatBoxIndex - 1].text.length *
+            timerInstace.typingSpeed) +
         timerInstace.typingDelay
       );
     }
@@ -46,8 +66,24 @@ function Home() {
   const closeLoading = () => {
     setShowLoading(false);
   };
+  // useEffect(() => {
+  //   const scrollTop = document.documentElement.scrollTop
+  //     ? document.documentElement.scrollTop
+  //     : document.body.scrollTop;
+  //   const element =
+  //     document.getElementsByClassName("Chat-box")[chatBoxIndex - 1];
+  //   if (element instanceof HTMLElement) {
+  //     // setTimeout(() => {
+  //     // console.log(scrollTop, element.offsetTop, element.scrollHeight);
+  //     // window.scrollTo(0, element.offsetTop);
+  //     // }, timerInstace.typingDelay);
+  //     setTimeout(() => {
+  //       window.scrollTo(0, scrollTop);
+  //     }, timerInstace.typingDelay + chatBoxResumeList[chatBoxIndex - 1].chatBoxLottieHideDelay);
+  //   }
+  // }, [chatBoxIndex]);
   return (
-    <div className="App">
+    <div className="Home">
       {showLoading ? (
         <div
           className="loading-container"

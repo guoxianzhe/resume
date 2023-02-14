@@ -3,4 +3,8 @@ const Home = {
   path: `${prefix}/`,
 };
 
-export { Home };
+const Resume = {
+  path: `${prefix}/download`,
+};
+
+export { Home, Resume };

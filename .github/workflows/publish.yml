@@ -9,7 +9,7 @@ on:
       - gh-pages # excludes gh-pages
 
 jobs:
-  test:
+  Publish:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -43,4 +43,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git config --global user.name "xianzhe.guo"
+          git config --global user.email "guo90962@gmail.com"
           npm run deploy

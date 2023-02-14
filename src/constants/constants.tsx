@@ -22,6 +22,11 @@ export const chatBoxResumeList = [
   },
   {
     showAnimationWithCss: true,
+    text: "毕业于太原理工大学(2011-2015) 软件工程专业",
+    chatBoxLottieHideDelay: 500,
+  },
+  {
+    showAnimationWithCss: true,
     text: "请给我点时间,让我介绍一下自己,谢谢!",
     chatBoxLottieHideDelay: 500,
   },

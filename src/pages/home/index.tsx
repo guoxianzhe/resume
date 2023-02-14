@@ -66,22 +66,6 @@ function Home() {
   const closeLoading = () => {
     setShowLoading(false);
   };
-  // useEffect(() => {
-  //   const scrollTop = document.documentElement.scrollTop
-  //     ? document.documentElement.scrollTop
-  //     : document.body.scrollTop;
-  //   const element =
-  //     document.getElementsByClassName("Chat-box")[chatBoxIndex - 1];
-  //   if (element instanceof HTMLElement) {
-  //     // setTimeout(() => {
-  //     // console.log(scrollTop, element.offsetTop, element.scrollHeight);
-  //     // window.scrollTo(0, element.offsetTop);
-  //     // }, timerInstace.typingDelay);
-  //     setTimeout(() => {
-  //       window.scrollTo(0, scrollTop);
-  //     }, timerInstace.typingDelay + chatBoxResumeList[chatBoxIndex - 1].chatBoxLottieHideDelay);
-  //   }
-  // }, [chatBoxIndex]);
   return (
     <div className="Home">
       {showLoading ? (
@@ -102,6 +86,7 @@ function Home() {
           </div>
         ))
       )}
+      {chatBoxIndex > 6 && <p>1</p>}
     </div>
   );
 }

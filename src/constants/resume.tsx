@@ -13,13 +13,13 @@ export const RESUME: ResumeConfig = {
   },
   educationList: [
     {
-      edu_time: ["2011.09.01", "2015.06.30"],
+      edu_time: ["2011.09", "2015.06"],
       school: "太原理工大学",
       major: "软件工程",
       academic_degree: "本科",
     },
     {
-      edu_time: ["2019.03.01", "2019.08.30"],
+      edu_time: ["2019.03", "2019.09"],
       school: "電気通信大学",
       major: "自然语言处理",
       academic_degree: "肄业",
@@ -44,9 +44,9 @@ export const RESUME: ResumeConfig = {
       work_time: ["2019.09", "至今"],
       work_desc: [
         "1.作为公司前端架构师,负责公司前端各项目的架构设计。包括移动端APP,Web端,与桌面应用程序的架构,涉及音视频通信工具,IM。",
-        "2.作为项目经理,承担scrum master的职责并进行PO需求分析,管理工程师的日常工作,并向CTO和董事会进行汇报。",
+        "2.作为项目经理,承担scrum master的职责并进行PO需求分析,管理工程师的日常工作。",
         "3.基于Jira研发管理工具,提高公司敏捷开发的效率。",
-        "4.独立负责许多项目的从0到1建设,这其中包括了项目的初始化、业务分析、开发、联调测试、上线等各环节。",
+        "4.独立负责许多项目的0到1建设,其中包括项目的初始化、业务分析、开发、联调测试、上线等环节。",
       ],
     },
     {
@@ -58,11 +58,11 @@ export const RESUME: ResumeConfig = {
       ],
     },
     {
-      company_name: "同程旅游",
+      company_name: "同程旅行",
       department_name: "Web前端工程师",
       work_time: ["2014.09", "2017.07"],
       work_desc: [
-        "1.期间从实习生到转正,负责同程旅游APP端中部分Hybrid混合项目的开发工作",
+        "1.期间从实习生到转正,负责同程旅行APP端中部分Hybrid混合项目的开发工作",
         "2.根据项目特点,自主创新实现出m站跟Hybrid项目的代码统一方案。",
         "3.后期承担scrum master的职责",
       ],
@@ -70,25 +70,61 @@ export const RESUME: ResumeConfig = {
   ],
   projectList: [
     {
-      project_name: "株式会社POPER",
-      project_role: "前端架构师 项目经理",
+      project_skills: ["Vue", "React Native", "Jenkins"],
+      project_name: "Comiru、Comiru入退室",
+      project_role: "前端架构师、项目经理",
       project_time: "2019.09 - 至今",
-      project_desc: "",
-      project_content: "",
+      project_desc:
+        "根据公司PC端业务与日本线下补习班的模式,分析其中的特点和问题,并结合移动设备的特性,分别设计出教务管理Comiru和打卡出勤Comiru入退室2个APP。",
+      project_content:
+        "进行从零到一的项目架构,根据PO的诉求提出实现方案和建议并管理日常开发的工作,合理安排版本迭代的节奏。结合Sentry与Google Analytics的埋点数据分析APP的潜在问题和风险预测。自主通过Jenkins设计出一键式打包分发上架流程。",
     },
     {
-      project_name: "北京锐界科技",
-      project_role: "Web前端工程师",
-      project_time: "2017.07 - 2019.01",
-      project_desc: "",
-      project_content: "",
+      project_skills: ["React", "Flutter"],
+      project_name: "ComiruAir",
+      project_role: "前端架构师",
+      project_time: "2020.01 - 至今",
+      project_desc:
+        "基于Agora与Amazon Chime实现的一款在线音视频通话WebApp,包括ComiruAirAPP。",
+      project_content:
+        "承担初期开发全部的工作,并根据不同WebRTC供应商接口使用规则,设计出让业务层统一接入的SDK,它可在不改变业务层时进行供应商切换来降低公司成本。后任SM带领工程师完成后续迭代。",
     },
     {
-      project_name: "同程旅游",
+      project_skills: ["React", "Electron"],
+      project_name: "Comiru IM",
+      project_role: "前端架构师、项目经理",
+      project_time: "2022.08 - 至今",
+      project_desc:
+        "基于SendBird与Electron的一款IM桌面应用产品。上架于Apple与Microsoft平台。",
+      project_content:
+        "根据CTO的基本要求,按照产品经理的思维来设计产品的形态与起草整个产品所有的前后端技术细节,实现项目的初期架构与部分模块的开发。",
+    },
+    {
+      project_skills: ["Angular2", "FIS", "d3.js", "Echarts"],
+      project_name: "机器人管理ERP系统",
       project_role: "Web前端工程师",
       project_time: "2014.09 - 2017.07",
-      project_desc: "",
-      project_content: "",
+      project_desc: "大型SAP后台管理系统",
+      project_content:
+        "负责ERP系统的架构与全站开发。该系统含大量的图形处理,通过使用d3.js与Echarts来实现业务的要求。针对svg绘制与canvas绘制的图标做了很多优化来提高使用体验。同时针对系统数据量庞大,页面dom渲染过多问题做了性能上的优化。由于是SAP项目,设计了一套完整的项目懒加载来提高项目的访问速度,这其中包括组件库的设计,页面模块化等重构。",
+    },
+    {
+      project_skills: ["Angular1", "Webpack", "React"],
+      project_name: "Hybrid混合WebApp研发",
+      project_role: "Web前端工程师",
+      project_time: "2014.09 - 2017.07",
+      project_desc: "基于Webview的Hybrid混合Web开发",
+      project_content:
+        "负责同程旅行APP端Hybrid混合项目的开发工作,并基于zepto与ant-design实现出一套代替Native组件的UI库,将m站跟Hybrid项目的代码进行统一。发布时通过webpack相关配置来进行区分式打包,大大降低了开发的人力,提高了业务的开发效率。",
+    },
+    {
+      project_skills: ["Zepto", "artTemplate", "gulp", "grunt"],
+      project_name: "活动专题H5开发",
+      project_role: "Web前端工程师",
+      project_time: "2014.09 - 2017.07",
+      project_desc: "M站和APP中的活动页面开发",
+      project_content:
+        "基于Zepto,artTemplate来实现业务的一些H5活动页面,解决了诸多移动端的疑难杂症如输入框遮挡问题,首屏渲染效率优化,不同手机设备(include WP)的UI适配等。",
     },
   ],
   aboutme: [
@@ -138,6 +174,7 @@ export type ResumeConfig = {
   }>;
 
   projectList?: Array<{
+    project_skills: string[];
     project_name: string;
     project_role: string;
     project_desc?: string;

@@ -4,7 +4,7 @@ const Home = {
 };
 
 const Resume = {
-  path: `${prefix}/download`,
+  path: `${prefix}/preview`,
 };
 
 export { Home, Resume };

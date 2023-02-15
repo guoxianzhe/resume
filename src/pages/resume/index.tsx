@@ -81,8 +81,7 @@ function Resume() {
                           </span>
                         </span>
                         <span className="sub-info" style={{ float: "right" }}>
-                          {start}
-                          {end}
+                          {start} - {end}
                         </span>
                       </div>
                     </div>
@@ -130,7 +129,7 @@ function Resume() {
               text={<div className="section-title">工作经历</div>}
               placement="start"
             >
-              <Card className="section section-project">
+              <Card className="section section-company">
                 {RESUME.workExpList.map((work) => {
                   const start = work.work_time[0];
                   const end = work.work_time[1] ? work.work_time[1] : null;
@@ -144,12 +143,11 @@ function Resume() {
                           </span>
                         </b>
                         <span className="info-time">
-                          {start}
-                          {end}
+                          {start} - {end}
                         </span>
                       </div>
                       {work.work_desc.map((desc) => (
-                        <div className="work-description" key="desc">
+                        <div className="work-description" key={desc}>
                           {desc}
                         </div>
                       ))}
@@ -175,8 +173,13 @@ function Resume() {
                         </span>
                       </b>
                       {project.project_role && (
-                        <Tag>{project.project_role}</Tag>
+                        <Tag color="green">{project.project_role}</Tag>
                       )}
+                    </div>
+                    <div className="section-project-info">
+                      {project.project_skills.map((skill) => (
+                        <Tag key={skill}>{skill}</Tag>
+                      ))}
                     </div>
                     <div className="section-detail">
                       <b>项目描述：</b>

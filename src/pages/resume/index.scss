@@ -6,7 +6,17 @@
 
     .resume-content {
       width: 100%;
-      box-shadow: none;
+      box-shadow: none !important;
+      margin-top: 0 !important;
+      .basic-info {
+        padding-top: 0 !important;
+        .ant-ribbon-wrapper:is(:nth-child(5)) {
+          break-after: page;
+          .ant-card-bordered {
+            border-bottom: 1px solid #f0f0f0 !important;
+          }
+        }
+      }
     }
   }
 
@@ -15,19 +25,127 @@
     min-height: 942px;
     margin: 20px auto 60px auto;
     background: #fff;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 
     @media (max-width: 794px) {
       width: 100%;
     }
-    // 加点阴影
-    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 
-    // 布局位置
     .basic-info {
       padding: 24px 18px 24px 24px;
+      .section {
+        padding-top: 28px;
+        border-radius: 0;
+      }
+      section {
+        margin-bottom: 16px;
+
+        .section-detail {
+          letter-spacing: 1.2px;
+
+          &:not(:first-of-type) {
+            margin-top: 4px;
+          }
+        }
+        .section-info {
+          .info-name {
+            max-width: 198px;
+            padding-right: 4px;
+          }
+        }
+        .sub-info {
+          color: rgba(0, 0, 0, 0.45);
+        }
+      }
+      .avatar {
+        display: block;
+        width: 84px;
+        height: 84px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .name {
+        margin: 0 0 8px 4px;
+        font-size: 24px;
+        line-height: 36px;
+      }
+
+      .profile {
+        margin-bottom: 16px;
+        position: relative;
+        padding-right: 84px;
+        .profile-list {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 4px;
+
+          > div {
+            display: flex;
+            align-items: center;
+            flex: 220px 1;
+            margin-right: 4px;
+          }
+
+          > div:not(:last-of-type) {
+            margin-bottom: 4px;
+          }
+
+          .anticon {
+            margin-right: 6px;
+          }
+        }
+      }
+
+      .section-skill {
+        .skill-item {
+          display: flex;
+          justify-content: space-between;
+
+          &:not(:first-of-type) {
+            margin-top: 2px;
+          }
+        }
+
+        .skill-rate {
+          font-size: 14px;
+          display: flex;
+
+          .ant-rate-star {
+            margin-right: 4px;
+          }
+        }
+
+        .skill-detail-item {
+          margin-top: 4px;
+        }
+      }
+      .section-award {
+        .sub-info {
+          font-size: 14px;
+          margin-left: 8px;
+        }
+      }
+
+      .education-item {
+        &:not(:first-of-type) {
+          margin-top: 8px;
+        }
+      }
+
+      .section-work {
+        > div {
+          line-height: 24px;
+        }
+
+        a.sub-info {
+          font-size: 12px;
+          margin-left: 8px;
+        }
+      }
     }
 
-    // 复写
     .ant-ribbon {
       height: 24px;
       line-height: 24px;
@@ -42,15 +160,10 @@
       padding: 12px 24px;
     }
 
-    .basic-info .section {
-      padding-top: 28px;
-      border-radius: 0;
-    }
     .ant-ribbon-wrapper:not(:last-of-type) .ant-card-bordered {
       border-bottom: 0;
     }
 
-    // 内容样式 通用
     &:not(:first-of-type) {
       margin-top: 24px;
     }
@@ -65,125 +178,11 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    .basic-info section .section-info {
-      .info-name {
-        max-width: 198px;
-        padding-right: 4px;
-      }
+    .section-project-info {
+      margin-bottom: 10px;
     }
-
-    // basic-info 内容样式
-    .basic-info .avatar {
-      display: block;
-      width: 84px;
-      height: 84px;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .basic-info .name {
-      margin: 0 0 8px 4px;
-      font-size: 24px;
-      line-height: 36px;
-    }
-
-    .basic-info .profile {
-      margin-bottom: 16px;
-      position: relative;
-      padding-right: 84px;
-      .profile-list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 4px;
-
-        > div {
-          display: flex;
-          align-items: center;
-          flex: 220px 1;
-          margin-right: 4px;
-        }
-
-        > div:not(:last-of-type) {
-          margin-bottom: 4px;
-        }
-
-        .anticon {
-          margin-right: 6px;
-        }
-      }
-    }
-
-    // 非通用，skill
-    .basic-info .section-skill {
-      .skill-item {
-        display: flex;
-        justify-content: space-between;
-
-        &:not(:first-of-type) {
-          margin-top: 2px;
-        }
-      }
-
-      .skill-rate {
-        font-size: 14px;
-        display: flex;
-
-        .ant-rate-star {
-          margin-right: 4px;
-        }
-      }
-
-      .skill-detail-item {
-        margin-top: 4px;
-      }
-    }
-
-    // 非通用
-    .basic-info section .sub-info {
-      color: rgba(0, 0, 0, 0.45);
-    }
-
-    .basic-info .section-award {
-      .sub-info {
-        font-size: 14px;
-        margin-left: 8px;
-      }
-    }
-
-    .basic-info .education-item {
-      &:not(:first-of-type) {
-        margin-top: 8px;
-      }
-    }
-
-    .basic-info .section-work {
-      > div {
-        line-height: 24px;
-      }
-
-      a.sub-info {
-        font-size: 12px;
-        margin-left: 8px;
-      }
-    }
-
-    // main-info 内容样式
-    section {
-      margin-bottom: 16px;
-
-      .section-detail {
-        letter-spacing: 1.2px;
-
-        &:not(:first-of-type) {
-          margin-top: 4px;
-        }
-      }
-    }
-
-    // 非通用
     .section-project,
+    .section-company,
     .section-work-exp {
       .section-info .ant-tag {
         line-height: 20px;
@@ -192,7 +191,7 @@
       }
 
       .section-item:not(:first-of-type) {
-        margin-top: 18px;
+        margin-top: 12px;
       }
 
       .section-info .sub-info,

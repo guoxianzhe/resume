@@ -63,22 +63,22 @@ export const chatBoxResumeList = [
       根据公司PC端业务与日本线下补习班的模式,分析其中的特点和问题,并结合移动设备的特性,分别设计出教务管理、在线音视频通话与多模式打卡出勤APP来帮助公司实现移动端产品线的布局。
       这其中包括了项目的初始化、业务分析、开发、联调测试、上线等各环节。主导选型不同的架构方案,与前端同学一起完成诸多移动端场景的业务变现。
 
-      使用到的技术: Vue2, React Native, Flutter, Jenkins自动化分发等。
+      使用到的技术: Vue2, React Native, Jenkins自动化分发等。
 
   • 在线音视频通话WebApp
 
-      基于Agora与Amazon Chime提供的API,完成在线音视频通话WebApp。
-      其中承担了初版开发的全部工作,并根据不同的WebRTC供应商接口使用规则,设计出可以统一接入的SDK来让业务层进行快速变现。
+      基于Agora与Amazon Chime提供,完成在线音视频通话WebApp。
+      其中承担了初期开发的全部工作,并根据不同的WebRTC供应商接口使用规则,设计出可让业务层统一接入的SDK。
       该SDK可在不改变业务层时进行供应商切换来实现降低公司成本的效果。
 
-      使用到的技术: React, Agora RTC, Amazon Chime等。
+      使用到的技术: React, Flutter等。
 
   • IM桌面应用
 
       基于SendBird与Electron, 完成IM桌面应用产品。包括设计整个产品所有的业务细节, 架构开发方案以及参与项目的部分模块开发。
       该业务解决了公司产品线没有即时通讯的短板,降低CS部门与用户的沟通成本。
 
-      使用到的技术: React, Electron, SendbirdAPI, Pusher等。`,
+      使用到的技术: React, Electron等。`,
     chatBoxLottieHideDelay: 1000,
   },
   {
@@ -97,7 +97,7 @@ export const chatBoxResumeList = [
   },
   {
     showAnimationWithCss: false,
-    text: `2014.09 - 2017.07 同程旅游
+    text: `2014.09 - 2017.07 同程旅行
   Web前端工程师
 
   • Hybrid混合WebApp研发

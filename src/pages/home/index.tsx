@@ -1,5 +1,5 @@
 import "./index.scss";
-import React, { memo, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { LottieElement } from "../../components/LottieElement";
 import loadingJson from "../../assets/json/loading.json";
 import { chatBoxResumeList, timerInstace } from "../../constants/constants";

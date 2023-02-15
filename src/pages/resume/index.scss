@@ -3,7 +3,10 @@
     @page {
       size: A4;
     }
-
+    .download-lottie,
+    .resume-footer {
+      display: none;
+    }
     .resume-content {
       width: 100%;
       box-shadow: none !important;
@@ -19,11 +22,24 @@
       }
     }
   }
-
+  .download-lottie {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 54px;
+    cursor: pointer;
+  }
+  .resume-footer {
+    height: 44px;
+    text-align: right;
+    margin: 0 auto;
+    max-width: 794px;
+    font-size: 14px;
+  }
   .resume-content {
     max-width: 794px;
     min-height: 942px;
-    margin: 20px auto 60px auto;
+    margin: 20px auto;
     background: #fff;
     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 
@@ -162,10 +178,6 @@
 
     .ant-ribbon-wrapper:not(:last-of-type) .ant-card-bordered {
       border-bottom: 0;
-    }
-
-    &:not(:first-of-type) {
-      margin-top: 24px;
     }
 
     .section-info {

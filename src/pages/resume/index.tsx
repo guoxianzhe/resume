@@ -1,17 +1,16 @@
 import "./index.scss";
-import React, { memo, useEffect, useState } from "react";
+import { memo } from "react";
 import { Avatar, Tag, Badge, Card } from "antd";
 import {
   PhoneFilled,
   MailFilled,
   GithubFilled,
   TrophyFilled,
-  CheckCircleFilled,
   ScheduleFilled,
-  EnvironmentFilled,
   HomeFilled,
-  CrownFilled,
 } from "@ant-design/icons";
+import downloadJson from "../../assets/json/download.json";
+import { LottieElement } from "../../components/LottieElement";
 import { RESUME } from "../../constants/resume";
 
 function Resume() {
@@ -198,6 +197,15 @@ function Resume() {
           ) : null}
         </div>
       </div>
+      <LottieElement
+        animationData={downloadJson}
+        className="download-lottie"
+        alt="下载简历"
+        click={() => {
+          window.open("./郭贤哲-前端-社招.pdf");
+        }}
+      />
+      <div className="resume-footer">Updated few days ago.</div>
     </div>
   );
 }

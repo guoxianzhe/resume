@@ -1,4 +1,4 @@
-const prefix = process.env.NODE_ENV === "production" ? "/resume" : "";
+const prefix = process.env.NODE_ENV === "production" ? "" : "";
 const Home = {
   path: `${prefix}/`,
 };

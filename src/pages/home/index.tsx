@@ -1,12 +1,16 @@
 import "./index.scss";
 import { memo, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { LottieElement } from "../../components/LottieElement";
 import loadingJson from "../../assets/json/loading.json";
+import resumeJson from "../../assets/json/resume.json";
 import { chatBoxResumeList, timerInstace } from "../../constants/constants";
 import { ChatBox } from "../../components/ChatBox";
 import { useInterval } from "../../utils/interval";
+import * as Routers from "../../constants/routes";
 
 function Home() {
+  const navigate = useNavigate();
   const [showLoading, setShowLoading] = useState<boolean>(true);
   const [currentChatBoxResumeList, setCurrentChatBoxResumeList] = useState<
     {
@@ -86,7 +90,16 @@ function Home() {
           </div>
         ))
       )}
-      {chatBoxIndex > 6 && <p>1</p>}
+      {chatBoxIndex > 2 && (
+        <LottieElement
+          animationData={resumeJson}
+          className="download-lottie"
+          alt="下载简历"
+          click={() => {
+            navigate(`${Routers.Resume.path}`);
+          }}
+        />
+      )}
     </div>
   );
 }

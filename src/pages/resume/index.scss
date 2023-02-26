@@ -35,14 +35,18 @@
     margin: 0 auto;
     max-width: 794px;
     font-size: 14px;
+    @media (max-width: 794px) {
+      padding: 0 18px 0 24px;
+    }
   }
   .resume-content {
     max-width: 794px;
     min-height: 942px;
     margin: 20px auto;
     background: #fff;
-    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-
+    @media (min-width: 795px) {
+      box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
+    }
     @media (max-width: 794px) {
       width: 100%;
     }

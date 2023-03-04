@@ -103,7 +103,7 @@ export const RESUME: ResumeConfig = {
       project_skills: ["Angular2", "FIS", "d3.js", "Echarts"],
       project_name: "机器人管理ERP系统",
       project_role: "Web前端工程师",
-      project_time: "2014.09 - 2017.07",
+      project_time: "2017.07 - 2019.01",
       project_desc: "大型SAP后台管理系统",
       project_content:
         "负责ERP系统的架构与全站开发。该系统含大量的图形处理,通过使用d3.js与Echarts来实现业务的要求。针对svg绘制与canvas绘制的图标做了很多优化来提高使用体验。同时针对系统数据量庞大,页面dom渲染过多问题做了性能上的优化。由于是SAP项目,设计了一套完整的项目懒加载来提高项目的访问速度,这其中包括组件库的设计,页面模块化等重构。",

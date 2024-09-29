@@ -38,6 +38,7 @@ export const chatBoxResumeList = [
   {
     showAnimationWithCss: false,
     text: `• 拥有丰富的web开发,app开发,Electron开发等跨端开发经验,有诸多海内外应用实战经验。
+• 有丰富的开源项目开发经验,对项目的CICD,自动化测试,自动化部署有很多经验。
 • 有丰富的移动端和PC端应用程序架构经验,带领团队开发过即时通讯,IM等多样化产品。
 • 掌握前端MVVM框架如React,Vue.js,Angular。
 • 对HTML、CSS有深刻地理解,掌握原生JS的编写且有面向对象编程的经验。
@@ -55,7 +56,34 @@ export const chatBoxResumeList = [
   },
   {
     showAnimationWithCss: false,
-    text: `2019.09 - 至今 株式会社POPER
+    text: `2023.04 - 至今 声网
+  跨平台工程师
+
+  • electron sdk
+
+      基于公司的音视频c++ sdk封装到electron框架,此为开源项目。解决客户在electron上遇到的各种问题(包括electron本身的常见业务问题以及音视频相关问题)
+      使用electron 自带的视频编解码能力,提高整个electron sdk自渲染链路上的性能体验(包括帧率,内存,GPU等性能优化)。
+      了解熟悉chromium以及整个electron的构建流程,并在此基础上进行二次开发。
+
+  • react native sdk
+
+      基于公司的音视频c++ sdk封装到react-native框架,此为开源项目。解决客户在RN上遇到的各种问题(包括RN本身的常见业务问题以及音视频相关问题)
+      使用NativeModules封装iOS和Android的一些原生功能,并在RN层进行调用。(如画中画,UIView的渲染等)。
+
+  • flutter web sdk
+
+      基于公司的音视频web sdk封装到flutter web框架,此为开源项目。对flutter官方的web生态比较熟悉。解决客户在flutter上遇到的各种问题(包括flutter本身的常见业务问题以及音视频相关问题)
+      对flutter web的性能优化有一定的经验。
+
+  • react sdk
+
+      基于公司的web sdk封装到react框架,此为开源项目。解决客户在react上遇到的各种问题(包括react本身的常见业务问题以及音视频相关问题)
+      对react有足够的了解,常用的生命周期,状态管理,组件化等都有一定的经验。`,
+    chatBoxLottieHideDelay: 1000,
+  },
+  {
+    showAnimationWithCss: false,
+    text: `2019.09 - 2023.04 株式会社POPER
   前端架构师 项目经理
 
   • 3个APP产品线的架构与开发

@@ -202,10 +202,10 @@ function Resume() {
         className="download-lottie"
         alt="下载简历"
         click={() => {
-          window.open("./郭贤哲-前端-社招.pdf");
+          window.open("./郭贤哲_Web工程师.pdf");
         }}
       />
-      <div className="resume-footer">Updated few days ago.</div>
+      <div className="resume-footer">Updated 2024 09.</div>
     </div>
   );
 }

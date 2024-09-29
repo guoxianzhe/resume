@@ -7,9 +7,9 @@ export const RESUME: ResumeConfig = {
     email: "guo90962@gmail.com",
     mobile: "18515598524",
     github: "https://github.com/guoxianzhe",
-    workExpYear: "工作经验: 8年",
+    workExpYear: "工作经验: 10年",
     workPlace: "",
-    positionTitle: "职位:前端工程师/项目经理",
+    positionTitle: "职位:前端工程师",
   },
   educationList: [
     {
@@ -39,9 +39,20 @@ export const RESUME: ResumeConfig = {
   ],
   workExpList: [
     {
+      company_name: "声网",
+      department_name: "跨平台工程师",
+      work_time: ["2023.04", "至今"],
+      work_desc: [
+        "1.负责公司的多个跨平台项目,包括Electron SDK,React Native SDK,Flutter SDK,React SDK。",
+        "2.所有项目均为开源项目,日常研发并维护所有CI/CD流程,自动化测试,自动化部署等。",
+        "3.负责解决客户在不同平台上遇到的各种问题,包括性能问题,业务问题等。",
+        "4.使用各自框架本身的一些特性结合公司的音视频产品做性能优化等。",
+      ],
+    },
+    {
       company_name: "株式会社POPER",
       department_name: "前端架构师 项目经理",
-      work_time: ["2019.09", "至今"],
+      work_time: ["2019.09", "2023.04"],
       work_desc: [
         "1.作为公司前端架构师,负责公司前端各项目的架构设计。包括移动端APP,Web端,与桌面应用程序的架构,涉及音视频通信工具,IM。",
         "2.作为项目经理,承担scrum master的职责并进行PO需求分析,管理工程师的日常工作。",
@@ -70,10 +81,34 @@ export const RESUME: ResumeConfig = {
   ],
   projectList: [
     {
+      project_skills: ["electron"],
+      project_name: "electron sdk开源项目",
+      project_role: "跨平台工程师",
+      project_time: "2023.04 - 至今",
+      project_desc: "基于公司的音视频c++ sdk封装到electron框架,使用electron 自带的视频编解码能力,提高整个electron sdk自渲染链路上的性能体验(包括帧率,内存,GPU等性能优化)。了解熟悉chromium以及整个electron的构建流程,并在此基础上进行二次开发。",
+      project_content:"解决客户在electron上遇到的各种问题,包括electron本身的常见业务问题以及音视频相关问题",
+    },
+    {
+      project_skills: ["react native"],
+      project_name: "rn sdk源项目",
+      project_role: "跨平台工程师",
+      project_time: "2023.04 - 至今",
+      project_desc: "基于公司的音视频c++ sdk封装到react-native框架。使用NativeModules封装iOS和Android的一些原生功能,并在RN层进行调用。(如画中画,UIView的渲染等)。",
+      project_content: "解决客户在rn上遇到的各种问题,包括rn本身的常见业务问题以及音视频相关问题",
+    },
+    {
+      project_skills: ["flutter"],
+      project_name: "flutter sdk开源项目",
+      project_role: "跨平台工程师",
+      project_time: "2023.04 - 至今",
+      project_desc: "基于公司的音视频web sdk封装到flutter web框架,实现flutter4个平台一份代码实现音视频能力",
+      project_content: "解决客户在flutter上遇到的各种问题,包括flutter本身的常见业务问题以及音视频相关问题,对flutter web的性能优化有一定的经验。",
+    },
+    {
       project_skills: ["Vue", "React Native", "Jenkins"],
       project_name: "Comiru、Comiru入退室",
       project_role: "前端架构师、项目经理",
-      project_time: "2019.09 - 至今",
+      project_time: "2019.09 - 2023.04",
       project_desc:
         "根据公司PC端业务与日本线下补习班的模式,分析其中的特点和问题,并结合移动设备的特性,分别设计出教务管理Comiru和打卡出勤Comiru入退室2个APP。",
       project_content:
@@ -83,7 +118,7 @@ export const RESUME: ResumeConfig = {
       project_skills: ["React", "Flutter"],
       project_name: "ComiruAir",
       project_role: "前端架构师",
-      project_time: "2020.01 - 至今",
+      project_time: "2020.01 - 2023.04",
       project_desc:
         "基于Agora与Amazon Chime实现的一款在线音视频通话WebApp,包括ComiruAirAPP。",
       project_content:
@@ -93,7 +128,7 @@ export const RESUME: ResumeConfig = {
       project_skills: ["React", "Electron"],
       project_name: "Comiru IM",
       project_role: "前端架构师、项目经理",
-      project_time: "2022.08 - 至今",
+      project_time: "2022.08 - 2023.04",
       project_desc:
         "基于SendBird与Electron的一款IM桌面应用产品。上架于Apple与Microsoft平台。",
       project_content:
@@ -129,6 +164,7 @@ export const RESUME: ResumeConfig = {
   ],
   aboutme: [
     "• 拥有丰富的web开发,app开发,Electron开发等跨端开发经验,有诸多海内外应用实战经验。",
+    "• 有丰富的开源项目开发经验,对项目的CICD,自动化测试,自动化部署有很多经验。",
     "• 有丰富的移动端和PC端应用程序架构经验,带领团队开发过即时通讯,IM等多样化产品。",
     "• 掌握前端MVVM框架如React,Vue.js,Angular。",
     "• 对HTML、CSS有深刻地理解,掌握原生JS的编写且有面向对象编程的经验。",
